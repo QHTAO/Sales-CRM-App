@@ -1,22 +1,41 @@
 import React from 'react';
-import {SafeAreaView, View, Text} from 'react-native';
+import {
+  SafeAreaView,
+  View,
+  Text,
+  TouchableOpacity,
+  ScrollView,
+} from 'react-native';
 import tw from './libs/tailwind';
-import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 import Icon from './components/Icon';
+
+import LinearGradient from 'react-native-linear-gradient';
 
 const App = () => {
   return (
-    <SafeAreaView>
-      <Icon name="notifications" size={40} />
-      <View style={[tw`bg-black`, {paddingVertical: 24}]}>
-        <Text style={tw`text-2xl text-white font-urbanist `}>Home</Text>
-      </View>
-
-      <View style={tw`py-6 bg-slate-500`}>
-        <Text style={tw`text-2xl text-black font-urbanist `}>Home</Text>
-      </View>
-
-      <Text style={{fontSize: 24}}>Home</Text>
+    <SafeAreaView style={tw`flex-1`}>
+      <ScrollView contentContainerStyle={{flexGrow: 1}}>
+        <LinearGradient
+          start={{x: 0, y: 0}}
+          end={{x: 0.7, y: 0.8}}
+          locations={[0, 0.2, 1]}
+          colors={['#FFFFFF', '#EDF1FA', '#DEE5F9']}
+          style={tw`flex-1 px-6`}>
+          {/* Header */}
+          <View style={tw`bg-w py-6 fle flex-row justify-between`}>
+            <Text style={tw`text-2xl text-black font-urbanist `}>Home</Text>
+            <TouchableOpacity
+              style={tw`w-10 h-10 rounded-lg bg-white flex flex-row justify-center items-center `}>
+              <Ionicons
+                name="notifications-outline"
+                size={24}
+                color="#221F40"
+              />
+            </TouchableOpacity>
+          </View>
+        </LinearGradient>
+      </ScrollView>
     </SafeAreaView>
   );
 };
