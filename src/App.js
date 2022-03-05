@@ -1,43 +1,172 @@
+import 'react-native-gesture-handler';
 import React from 'react';
-import {
-  SafeAreaView,
-  View,
-  Text,
-  TouchableOpacity,
-  ScrollView,
-} from 'react-native';
-import tw from './libs/tailwind';
+import {View} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import Icon from './components/Icon';
 
-import LinearGradient from 'react-native-linear-gradient';
-
+import {NavigationContainer} from '@react-navigation/native';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import HomeScreen from './screens/HomeScreen';
+import SalesScreen from './screens/SalesScreen';
+import tw from './libs/tailwind';
 const App = () => {
+  const Tab = createBottomTabNavigator();
   return (
-    <SafeAreaView style={tw`flex-1`}>
-      <ScrollView contentContainerStyle={{flexGrow: 1}}>
-        <LinearGradient
-          start={{x: 0, y: 0}}
-          end={{x: 0.7, y: 0.8}}
-          locations={[0, 0.2, 1]}
-          colors={['#FFFFFF', '#EDF1FA', '#DEE5F9']}
-          style={tw`flex-1 px-6`}>
-          {/* Header */}
-          <View style={tw`bg-w py-6 fle flex-row justify-between`}>
-            <Text style={tw`text-2xl text-black font-urbanist `}>Home</Text>
-            <TouchableOpacity
-              style={tw`w-10 h-10 rounded-lg bg-white flex flex-row justify-center items-center `}>
-              <Ionicons
-                name="notifications-outline"
-                size={24}
-                color="#221F40"
-              />
-            </TouchableOpacity>
-          </View>
-        </LinearGradient>
-      </ScrollView>
-    </SafeAreaView>
+    <NavigationContainer>
+      <Tab.Navigator
+        tabBarOptions={{
+          showLabel: false,
+          style: [
+            tw`shadow-md`,
+            {
+              backgroundColor: '#FFFFFF',
+              position: 'absolute',
+              padding: 0,
+              bottom: 50,
+              left: 20,
+              right: 20,
+              height: 80,
+              borderRadius: 16,
+            },
+          ],
+        }}>
+        <Tab.Screen
+          name={'home'}
+          component={HomeScreen}
+          options={{
+            tabBarIcon: ({size, focused}) => {
+              return focused ? (
+                <View
+                  style={{
+                    top: 20,
+                    shadowColor: '#DE64B9',
+                    shadowOpacity: 0.5,
+                    shadowRadius: 2,
+                    shadowOffset: {
+                      height: 2,
+                      width: 2,
+                    },
+                    elevation: 2,
+                  }}>
+                  <Ionicons name="home" color={'#DE64B9'} size={size} />
+                </View>
+              ) : (
+                <View
+                  style={{
+                    top: 20,
+                  }}>
+                  <Ionicons name="home-outline" color={'#221F40'} size={size} />
+                </View>
+              );
+            },
+          }}
+        />
+        <Tab.Screen
+          name={'workbench'}
+          component={SalesScreen}
+          options={{
+            tabBarIcon: ({size, focused}) => {
+              return focused ? (
+                <View
+                  style={{
+                    top: 20,
+                    shadowColor: '#DE64B9',
+                    shadowOpacity: 0.5,
+                    shadowRadius: 2,
+                    shadowOffset: {
+                      height: 2,
+                      width: 2,
+                    },
+                    elevation: 2,
+                  }}>
+                  <Ionicons name="analytics" color={'#DE64B9'} size={size} />
+                </View>
+              ) : (
+                <View
+                  style={{
+                    top: 20,
+                  }}>
+                  <Ionicons
+                    name="analytics-outline"
+                    color={'#221F40'}
+                    size={size}
+                  />
+                </View>
+              );
+            },
+          }}
+        />
+        <Tab.Screen
+          name={'notify'}
+          component={SalesScreen}
+          options={{
+            tabBarIcon: ({size, focused}) => {
+              return focused ? (
+                <View
+                  style={{
+                    top: 20,
+                    shadowColor: '#DE64B9',
+                    shadowOpacity: 0.5,
+                    shadowRadius: 2,
+                    shadowOffset: {
+                      height: 2,
+                      width: 2,
+                    },
+                    elevation: 2,
+                  }}>
+                  <Ionicons name="chatbubble" color={'#DE64B9'} size={size} />
+                </View>
+              ) : (
+                <View
+                  style={{
+                    top: 20,
+                  }}>
+                  <Ionicons
+                    name="chatbubble-outline"
+                    color={'#221F40'}
+                    size={size}
+                  />
+                </View>
+              );
+            },
+          }}
+        />
+        <Tab.Screen
+          name={'profile'}
+          component={SalesScreen}
+          options={{
+            tabBarIcon: ({size, focused}) => {
+              return focused ? (
+                <View
+                  style={{
+                    top: 20,
+                    shadowColor: '#DE64B9',
+                    shadowOpacity: 0.5,
+                    shadowRadius: 2,
+                    shadowOffset: {
+                      height: 2,
+                      width: 2,
+                    },
+                    elevation: 2,
+                  }}>
+                  <Ionicons name="person" color={'#DE64B9'} size={size} />
+                </View>
+              ) : (
+                <View
+                  style={{
+                    top: 20,
+                  }}>
+                  <Ionicons
+                    name="person-outline"
+                    color={'#221F40'}
+                    size={size}
+                  />
+                </View>
+              );
+            },
+          }}
+        />
+      </Tab.Navigator>
+    </NavigationContainer>
   );
 };
-
 export default App;

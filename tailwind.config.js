@@ -6,7 +6,8 @@ module.exports = {
         black: '#221F40',
       },
       fontFamily: {
-        urbanist: ['Urbanist-Medium'],
+        urbanist: ['Urbanist-SemiBold'],
+        urbanistBold: ['Urbanist-ExtraBold'],
       },
     },
   },
