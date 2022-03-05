@@ -35,8 +35,8 @@ const SalesStatsChart = () => {
           </View>
         </View>
         <VictoryChart
-          height={180}
-          padding={{left: 30, right: 80, top: 5, bottom: 40}}>
+          height={150}
+          padding={{left: 30, right: 80, top: 0, bottom: 40}}>
           {renderVictoryBarBackgournd()}
           {/* VictoryBar   */}
           <VictoryBar

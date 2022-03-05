@@ -25,17 +25,17 @@ const HomeScreen = () => {
           bodyText={'Here are your tasks for today'}
           rightText={'See all'}
         />
-        {/* tasks */}
+
         {tasksData.map((item, index) => (
           <View
-            style={tw`fle flex-row mb-3 bg-white shadow-md rounded-xl `}
+            style={tw`fle flex-row mb-4 bg-white shadow-md rounded-xl `}
             key={item.id}>
             <LinearGradient
               start={{x: 1, y: 0}}
               end={{x: 0.3, y: 1}}
               locations={[0, 1]}
               colors={item.colors}
-              style={tw`rounded-xl h-12 w-12 flex flex-row justify-center items-center`}>
+              style={tw`rounded-xl h-13 w-13 flex flex-row justify-center items-center`}>
               <Ionicons name={item.icon} size={24} color="#FFFFFF" />
             </LinearGradient>
             <View style={tw`flex-col justify-center ml-4`}>
@@ -45,6 +45,7 @@ const HomeScreen = () => {
             </View>
           </View>
         ))}
+
         <SalesStatsChart />
       </LinearGradient>
     </Contianer>

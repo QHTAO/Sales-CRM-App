@@ -13,6 +13,7 @@ const App = () => {
   return (
     <NavigationContainer>
       <Tab.Navigator
+        sceneContainerStyle={{backgroundColor: 'transparent'}}
         tabBarOptions={{
           showLabel: false,
           style: [
