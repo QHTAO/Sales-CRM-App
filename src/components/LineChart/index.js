@@ -2,7 +2,7 @@ import React from 'react';
 import {ScrollView, View, Text} from 'react-native';
 import {Defs, LinearGradient, Stop, Svg} from 'react-native-svg';
 import {VictoryChart, VictoryLine, VictoryAxis} from 'victory-native';
-import {VictoryLabel, VictoryZoomContainer} from 'victory-native';
+import {VictoryLabel} from 'victory-native';
 const LineChart = ({data, x, y}) => {
   return (
     <View>
@@ -84,15 +84,28 @@ const LineChart = ({data, x, y}) => {
         </ScrollView>
       </View>
       {/* title */}
-      <View style={{position: 'absolute', top: 30, left: 50}}>
+      <View style={{position: 'absolute', top: 30, left: 60}}>
         <View
           style={{
             flexDirection: 'row',
           }}>
-          <Text style={{color: '#FFFFFF', fontSize: 18, marginRight: 130}}>
+          <Text
+            style={{
+              fontFamily: 'Urbanist-SemiBold',
+              color: '#FFFFFF',
+              fontSize: 16,
+              marginRight: 150,
+            }}>
             $148,455
           </Text>
-          <Text style={{color: '#F9C4DF', fontSize: 18}}>September</Text>
+          <Text
+            style={{
+              fontFamily: 'Urbanist-SemiBold',
+              color: '#F9C4DF',
+              fontSize: 16,
+            }}>
+            September
+          </Text>
         </View>
       </View>
     </View>
