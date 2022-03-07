@@ -14,6 +14,6 @@
 ### 屏幕截图
 
 <div>
-  <img src="https://raw.githubusercontent.com/QHTAO/Sales-CRM-App/master/src/assets/images/Simulator%20Screen%20Shot%20-%20iPhone%2013%20-%202022-03-08%20at%2005.00.21.png"  style="width:390px; margin-right:10px"/>
-  <img src="https://raw.githubusercontent.com/QHTAO/Sales-CRM-App/master/src/assets/images/Simulator%20Screen%20Shot%20-%20iPhone%2013%20-%202022-03-08%20at%2005.00.19.png"  style="width:390px;"/>
+  <img src="https://raw.githubusercontent.com/QHTAO/Sales-CRM-App/master/src/assets/images/Simulator%20Screen%20Shot%20-%20iPhone%2013%20-%202022-03-08%20at%2005.00.21.png"  style="width: 390px;max-width: 100%;margin-right: 10px;border: 1px solid #000000;"/>
+  <img src="https://raw.githubusercontent.com/QHTAO/Sales-CRM-App/master/src/assets/images/Simulator%20Screen%20Shot%20-%20iPhone%2013%20-%202022-03-08%20at%2005.00.19.png"  style="width: 390px;max-width: 100%;margin-right: 10px;border: 1px solid #000000;"/>
 </div>
