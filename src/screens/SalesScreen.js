@@ -117,7 +117,7 @@ const SalesScreen = () => {
           </View>
         </View>
         {/* lineChart  */}
-        <Title bodyText="Goal for the current month" />
+        <Title bodyText="Goal for the current month" styel={tw`mt-3`} />
         <LineChart data={salesStatsForDays} x="day" y="amount" />
       </Contianer>
     </LinearGradient>

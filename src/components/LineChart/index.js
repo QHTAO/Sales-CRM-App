@@ -5,8 +5,14 @@ import {VictoryChart, VictoryLine, VictoryAxis} from 'victory-native';
 import {VictoryLabel} from 'victory-native';
 const LineChart = ({data, x, y}) => {
   return (
-    <View>
-      <View style={{display: 'flex', flexDirection: 'row', marginRight: -24}}>
+    <View style={{position: 'relative'}}>
+      <View
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          marginTop: -10,
+          marginRight: -24,
+        }}>
         <Svg
           width={30}
           height={220}
@@ -84,7 +90,7 @@ const LineChart = ({data, x, y}) => {
         </ScrollView>
       </View>
       {/* title */}
-      <View style={{position: 'absolute', top: 30, left: 60}}>
+      <View style={{position: 'absolute', top: 20, left: 60}}>
         <View
           style={{
             flexDirection: 'row',
