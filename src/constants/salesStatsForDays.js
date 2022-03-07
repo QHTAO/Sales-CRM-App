@@ -1,10 +1,10 @@
 const salesStatsForDays = [
   {amount: 11100, day: 'Sep1'},
-  {amount: 1140, day: 'Sep2'},
+  {amount: 7140, day: 'Sep2'},
   {amount: 11100, day: 'Sep3'},
-  {amount: 1140, day: 'Sep4'},
+  {amount: 3140, day: 'Sep4'},
   {amount: 11100, day: 'Sep5'},
-  {amount: 1700, day: 'Sep6'},
+  {amount: 4700, day: 'Sep6'},
   {amount: 11100, day: 'Sep7'},
   {amount: 11300, day: 'Sep8'},
   {amount: 1100, day: 'Sep9'},

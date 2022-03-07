@@ -1,5 +1,5 @@
 import React from 'react';
-import {View} from 'react-native';
+import {View, Platform} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -15,10 +15,10 @@ const AppTabNavigator = () => {
     return (
       <View
         style={[
-          {top: 20},
+          {top: Platform.OS === 'ios' ? 20 : 0},
           focused
             ? {
-                top: 20,
+                top: Platform.OS === 'ios' ? 20 : 0,
                 shadowColor: '#DE64B9',
                 shadowOpacity: 0.5,
                 shadowRadius: 2,
@@ -45,7 +45,7 @@ const AppTabNavigator = () => {
       sceneContainerStyle={tw`bg-transparent`}
       tabBarOptions={{
         showLabel: false,
-        style: tw`shadow-md bg-white absolute bottom-12 left-6 right-6 rounded-xl`,
+        style: tw`shadow-md bg-white absolute bottom-12 android:h-18  left-6 right-6 rounded-xl`,
       }}>
       <Tab.Screen
         name={'home'}
