@@ -1,4 +1,5 @@
 # 销售 CRM 应用程序
+
 设计来源：[Sales CRM App](https://dribbble.com/shots/16673175-Sales-CRM-App)
 
 ### 功能特点
@@ -11,8 +12,7 @@
 ### 使用技术
 
 ### 屏幕截图
-<img src="https://raw.githubusercontent.com/QHTAO/Sales-CRM-App/master/src/assets/images/Simulator%20Screen%20Shot%20-%20iPhone%2013%20-%202022-03-08%20at%2005.00.19.png"  style="width:390px;"/>
-<img src="https://raw.githubusercontent.com/QHTAO/Sales-CRM-App/master/src/assets/images/Simulator%20Screen%20Shot%20-%20iPhone%2013%20-%202022-03-08%20at%2005.00.21.png"  style="width:390px;"/>
-
-
-
+<div>
+    <img src="https://raw.githubusercontent.com/QHTAO/Sales-CRM-App/master/src/assets/images/Simulator%20Screen%20Shot%20-%20iPhone%2013%20-%202022-03-08%20at%2005.00.19.png"  style="width:390px;"/>
+    <img src="https://raw.githubusercontent.com/QHTAO/Sales-CRM-App/master/src/assets/images/Simulator%20Screen%20Shot%20-%20iPhone%2013%20-%202022-03-08%20at%2005.00.21.png"  style="width:390px;"/>
+</div>
